@@ -1230,6 +1230,10 @@ body {
   opacity: .4;
 }
 
+.inner-link {
+  color: #00a393;
+}
+
 /*mfp-gallery-style*/
 .mfp-ready .mfp-figure {
   opacity: 0;
