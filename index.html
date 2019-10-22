@@ -13,10 +13,33 @@
   <link rel="icon" href="images/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="stylesheet" href="css/main.min.css">
+
+  <script type="text/javascript">
+
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 53.1552241, lng: 38.9944603 },
+        scrollwheel: false,
+        zoom: 6
+      });
+      var companyPos = new google.maps.LatLng(52.723598, 41.4423062);
+      var companyMarker = new google.maps.Marker({
+        position: companyPos,
+        map: map,
+      });
+    }
+  </script>
 </head>
 
 <body>
   <header class="main-header">
+
+    <div class="map-overlay">
+      <div id="map" class="modal-map"></div>
+      <span class="modal-close"></span>
+    </div>
+
     <div class="container">
       <div class="header-content">
         <div class="img-wrapper">
@@ -24,10 +47,11 @@
         </div>
         <div class="header-text">
           <h1>Юрий Смольянинов</h1>
-          <p>С 2016 года занимаюсь <span class="web-design">Web-дизайном</span> и <span class="html-mark">HTML-версткой</span>.
+          <p>С 2016 года занимаюсь <span class="web-design">Web-дизайном</span> и <span
+              class="html-mark">HTML-версткой</span>.
             Слежу за трендами в дизайне и Front-end.
             Делаю легкие и удобные интерфейсы, веб-сайты.
-            <br>Живу в Тамбове → <span class="alert">Готов к переезду</span>.
+            <br>Живу в <a class="modal-map-show" href="#">Тамбове</a> → <span class="alert">Готов к переезду</span>.
           </p>
           <nav class="main-navigation">
             <ul>
@@ -165,31 +189,31 @@
 
 
           <div class="gallery-item-wrapp">
-              <a href="images/arctica.jpg" class="gallery-item">
-                <img src="images/arctica-min.jpg" class="img-responsive" alt="Arctica">
-              </a>
-              <a href="images/email-lamoda.jpg" class="gallery-item">
-                <img src="images/email-lamoda-min.jpg" class="img-responsive" alt="Email Lamoda">
-              </a>
+            <a href="images/arctica.jpg" class="gallery-item">
+              <img src="images/arctica-min.jpg" class="img-responsive" alt="Arctica">
+            </a>
+            <a href="images/email-lamoda.jpg" class="gallery-item">
+              <img src="images/email-lamoda-min.jpg" class="img-responsive" alt="Email Lamoda">
+            </a>
           </div>
 
 
           <div class="gallery-item-wrapp">
-              <div class="mobile">
-                <a href="images/jazz.jpg" class="gallery-item">
-                  <img src="images/jazz-min.jpg" class="img-responsive" alt="Jazz">
-                </a>
-                <a href="images/vintage.jpg" class="gallery-item">
-                  <img src="images/vintage-min.jpg" class="img-responsive" alt="Vintage">
-                </a>
-                <a href="images/music-poster.jpg" class="gallery-item">
-                  <img src="images/music-poster-min.jpg" class="img-responsive" alt="Music Poster">
-                </a>
-                <a href="images/samurai.jpg" class="gallery-item">
-                  <img src="images/samurai-min.jpg" class="img-responsive" alt="Samurai">
-                </a>
-              </div>
+            <div class="mobile">
+              <a href="images/jazz.jpg" class="gallery-item">
+                <img src="images/jazz-min.jpg" class="img-responsive" alt="Jazz">
+              </a>
+              <a href="images/vintage.jpg" class="gallery-item">
+                <img src="images/vintage-min.jpg" class="img-responsive" alt="Vintage">
+              </a>
+              <a href="images/music-poster.jpg" class="gallery-item">
+                <img src="images/music-poster-min.jpg" class="img-responsive" alt="Music Poster">
+              </a>
+              <a href="images/samurai.jpg" class="gallery-item">
+                <img src="images/samurai-min.jpg" class="img-responsive" alt="Samurai">
+              </a>
             </div>
+          </div>
 
 
         </div>
